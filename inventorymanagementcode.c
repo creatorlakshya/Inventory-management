@@ -58,18 +58,18 @@ int main() {
                             scanf("%d", &xqty);
 
                             if (it[j].qty + xqty > 50) {
-                                printf("⚠️ Stock overflow. Cannot purchase.\n");
+                                printf("⚠ Stock overflow. Cannot purchase.\n");
                             } else {
                                 pur[puc] = it[j];
                                 pur[puc].qty = xqty;
                                 it[j].qty += xqty;
                                 puc++;
-                                printf("✅ Purchase recorded.\n");
+                                printf(" Purchase recorded.\n");
                             }
                             break;
                         }
                     }
-                    if (!found) printf("❌ Item not found.\n");
+                    if (!found) printf("Item not found.\n");
                 }
                 break;
 
@@ -89,18 +89,18 @@ int main() {
                             scanf("%d", &xqty);
 
                             if (xqty > it[j].qty || it[j].qty - xqty < 5) {
-                                printf("⚠️ Insufficient stock or underflow.\n");
+                                printf("⚠Insufficient stock or underflow.\n");
                             } else {
                                 sal[sac] = it[j];
                                 sal[sac].qty = xqty;
                                 it[j].qty -= xqty;
                                 sac++;
-                                printf("✅ Sale recorded.\n");
+                                printf(" Sale recorded.\n");
                             }
                             break;
                         }
                     }
-                    if (!found) printf("❌ Item not found.\n");
+                    if (!found) printf(" Item not found.\n");
                 }
                 break;
 
